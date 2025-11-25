@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<style>
+    body {
+        background: linear-gradient(135deg, #f0f4ff, #e0eafc);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .home-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .welcome-box {
+        background: #ffffff;
+        padding: 3rem 4rem;
+        border-radius: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .welcome-box:hover {
+        transform: translateY(-5px);
+    }
+
+    h1.display-3 {
+        color: #0d6efd;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .btn-custom {
+        background-color: transparent;
+        border: 2px solid #0d6efd;
+        color: #0d6efd;
+        font-weight: 500;
+        font-size: 1.25rem;
+        padding: 0.6rem 2rem;
+        border-radius: 0.6rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background-color: #0d6efd;
+        color: white;
+        text-decoration: none;
+    }
+
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<div class="home-wrapper">
+    <div class="welcome-box">
+        <h1 class="display-3">Welcome to Student Portal</h1>
+        <a href="/Record/Create" class="btn btn-custom">Get Started</a>
+    </div>
+</div>
+
+
+
+
+
+
+

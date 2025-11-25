@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Record>
+
+<h1>Registration Records</h1>
+<p>
+	<a class="btn btn-success" asp-controller="Record" asp-action="Create">Create New Record</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Student Id</th>
+			<th>Full Name</th>
+			<th>Email</th>
+			<th>Date Of Birth</th>
+			<th>Registration Date</th>
+			<th>Department</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var record in Model)
+		{
+			<tr>
+				<td>@record.StudentId</td>
+				<td>@record.FullName</td>
+				<td>@record.Email</td>
+				<td>@record.DateOfBirth</td>
+				<td>@record.RegistrationDate</td>
+				<td>@record.Department</td>
+				<td>
+					<a class="btn btn-primary" asp-controller="Record" asp-action="Edit" asp-route-id="@record.Id">Edit</a>
+					<a class="btn btn-danger" asp-controller="Record" asp-action="Delete" asp-route-id="@record.Id">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
